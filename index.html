@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+const CONFIG = {
+  tiktokLink: "https://www.tiktok.com/@reinchan27?_r=1&_t=ZS-9A6ei3HxsI9",
+  groupLink: "https://chat.whatsapp.com/K2uOXSLtAy3FWAwr4cMxQd",
+  channelLink: "https://whatsapp.com/channel/0029Vaed3Gn6hENqJUiccJ0g",
+
+  tiktokThumbnail: "https://raw.githubusercontent.com/salwafirotul-cmd/Elaina-github/main/uploads/1790600901246.jpg",
+  groupThumbnail: "https://raw.githubusercontent.com/salwafirotul-cmd/Elaina-github/main/uploads/1790600932978.jpg",
+  channelThumbnail: "https://raw.githubusercontent.com/salwafirotul-cmd/Elaina-github/main/uploads/1790601001528.jpg",
+
+  botNumber: "085727369958",
+
+  tiktokName: "rein chan",
+  tiktokUsername: "@reinchan27",
+  tiktokDescription: "Seputar quotes/kata-kata Shima Rin\n#support me plis 🍂 road to 1k followers",
+
+  groupName: "Elaina Multi Device",
+
+  channelName: "Aether Quotes Art",
+  channelDescription: "Tempat berbagi art, quotes, dan kata-kata.",
+
+  ownerNumber: "6285755177449"
+};
+</script>
+<meta name="theme-color" content="#050507">
+<meta name="color-scheme" content="dark">
+<title>Elaina Multi Device</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#050507;
+  --yellow:#ffd000;
+  --red:#ff304f;
+  --purple:#8b5cf6;
+  --blue:#2563eb;
+
+  --text:#ffffff;
+  --muted:rgba(255,255,255,.74);
+  --glass-top:rgba(255,255,255,.12);
+  --glass-bottom:rgba(255,255,255,.04);
+  --glass-border:rgba(255,255,255,.17);
+  --wa-1:#25d366;
+  --wa-2:#0d9a6a;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{ scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth; color-scheme:dark; }
+
+*,*::before,*::after{ box-sizing:border-box; }
+*{ margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+
+body{
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  background:var(--black);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{ color:inherit; }
+a:focus-visible{ outline:2px solid #fff; outline-offset:3px; border-radius:12px; }
+
+.aurora{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  background:var(--black);
+  pointer-events:none;
+}
+.blob{
+  position:absolute;
+  border-radius:50%;
+  will-change:transform,opacity;
+  mix-blend-mode:screen;
+}
+.blob.yellow{
+  width:95vmax; height:95vmax;
+  left:-40vmax; top:-45vmax;
+  background:radial-gradient(circle at center, rgba(255,208,0,.85) 0%, rgba(255,208,0,.28) 32%, transparent 66%);
+  animation:driftYellow 28s ease-in-out infinite alternate;
+}
+.blob.red{
+  width:90vmax; height:90vmax;
+  right:-45vmax; top:-20vmax;
+  background:radial-gradient(circle at center, rgba(255,48,79,.85) 0%, rgba(255,48,79,.26) 34%, transparent 66%);
+  animation:driftRed 32s ease-in-out infinite alternate;
+}
+.blob.purple{
+  width:100vmax; height:100vmax;
+  left:-30vmax; bottom:-55vmax;
+  background:radial-gradient(circle at center, rgba(139,92,246,.9) 0%, rgba(139,92,246,.3) 34%, transparent 66%);
+  animation:driftPurple 36s ease-in-out infinite alternate;
+}
+.blob.blue{
+  width:92vmax; height:92vmax;
+  right:-40vmax; bottom:-40vmax;
+  background:radial-gradient(circle at center, rgba(37,99,235,.9) 0%, rgba(37,99,235,.3) 34%, transparent 66%);
+  animation:driftBlue 30s ease-in-out infinite alternate;
+}
+
+@keyframes driftYellow{
+  0%  { transform:translate3d(0,0,0) scale(1);       opacity:.85; }
+  50% { transform:translate3d(38vmax,30vmax,0) scale(1.15); opacity:.5; }
+  100%{ transform:translate3d(12vmax,62vmax,0) scale(.9);   opacity:.8; }
+}
+@keyframes driftRed{
+  0%  { transform:translate3d(0,0,0) scale(1);        opacity:.7; }
+  50% { transform:translate3d(-42vmax,26vmax,0) scale(1.12); opacity:.9; }
+  100%{ transform:translate3d(-18vmax,70vmax,0) scale(.95);  opacity:.5; }
+}
+@keyframes driftPurple{
+  0%  { transform:translate3d(0,0,0) scale(1);        opacity:.9; }
+  50% { transform:translate3d(46vmax,-28vmax,0) scale(1.1); opacity:.55; }
+  100%{ transform:translate3d(70vmax,-60vmax,0) scale(.92); opacity:.85; }
+}
+@keyframes driftBlue{
+  0%  { transform:translate3d(0,0,0) scale(1);         opacity:.6; }
+  50% { transform:translate3d(-48vmax,-34vmax,0) scale(1.15); opacity:.95; }
+  100%{ transform:translate3d(-20vmax,-66vmax,0) scale(.9);   opacity:.6; }
+}
+
+.aurora::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(5,5,7,.05) 0%, rgba(5,5,7,.5) 100%),
+    linear-gradient(180deg, rgba(5,5,7,.25), rgba(5,5,7,.55));
+}
+
+.container{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:460px;
+  margin:0 auto;
+  padding:44px 16px 64px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  animation:pageIn .9s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes pageIn{
+  from{ opacity:0; transform:translateY(16px); }
+  to{ opacity:1; transform:none; }
+}
+
+.card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:12px;
+  padding:26px 22px 22px;
+  border-radius:30px;
+  background:linear-gradient(160deg,var(--glass-top),var(--glass-bottom));
+  border:1px solid var(--glass-border);
+  -webkit-backdrop-filter:blur(22px) saturate(150%);
+  backdrop-filter:blur(22px) saturate(150%);
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.2),
+    0 0 0 rgba(139,92,246,0);
+  transition:box-shadow .45s ease, transform .45s ease, border-color .45s ease;
+}
+@media (hover:hover){
+  .card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(255,255,255,.3);
+    box-shadow:
+      0 26px 70px rgba(0,0,0,.45),
+      inset 0 1px 0 rgba(255,255,255,.25),
+      0 0 44px rgba(139,92,246,.28);
+  }
+}
+
+.page-title{
+  font-size:clamp(1.65rem,7.4vw,2.1rem);
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.15;
+  text-shadow:0 0 28px rgba(139,92,246,.55), 0 0 60px rgba(37,99,235,.35);
+}
+.card-title{
+  font-size:1.12rem;
+  font-weight:800;
+  letter-spacing:-.01em;
+}
+.card-desc{
+  color:var(--muted);
+  font-size:.86rem;
+  max-width:36ch;
+}
+.card-desc.multiline{ white-space:pre-line; max-width:none; }
+
+.ring{
+  position:relative;
+  width:92px; height:92px;
+  flex-shrink:0;
+  filter:drop-shadow(0 0 16px rgba(37,99,235,.5));
+}
+.ring::before{
+  content:"";
+  position:absolute; inset:0;
+  border-radius:50%;
+  background:conic-gradient(from 0deg,var(--yellow),var(--red),var(--purple),var(--blue),var(--yellow));
+  animation:spin 10s linear infinite;
+}
+.ring img{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:calc(100% - 8px);
+  height:calc(100% - 8px);
+  margin:4px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#12101f;
+  border:3px solid #0a0a12;
+}
+.ring.big{ width:104px; height:104px; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+.name-row{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:1.22rem;
+  font-weight:800;
+  letter-spacing:-.01em;
+}
+.verified{ width:20px; height:20px; flex-shrink:0; filter:drop-shadow(0 0 8px rgba(32,161,255,.7)); }
+.handle{ font-size:.92rem; font-weight:600; color:rgba(255,255,255,.85); margin-top:-6px; }
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  margin-top:6px;
+  padding:15px 18px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.22);
+  font:inherit;
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:.05em;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.btn svg{ width:20px; height:20px; flex-shrink:0; }
+.btn.wa{
+  background:linear-gradient(135deg,var(--wa-1),var(--wa-2));
+  box-shadow:0 10px 30px rgba(37,211,102,.28);
+}
+.btn.tt{
+  background:linear-gradient(135deg,#15151b,#26262f);
+  box-shadow:-4px 0 18px rgba(37,244,238,.32), 4px 0 18px rgba(254,44,85,.34);
+}
+@media (hover:hover){
+  .btn:hover{ transform:translateY(-3px); filter:brightness(1.08); }
+}
+.btn:active{ transform:scale(.975); }
+
+.join{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  margin-top:10px;
+  padding:20px 18px;
+  border-radius:24px;
+  font-size:1.08rem;
+  font-weight:800;
+  letter-spacing:.05em;
+  color:#fff;
+  text-decoration:none;
+  text-shadow:0 1px 8px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.3);
+  background:linear-gradient(110deg,var(--purple),var(--blue),var(--red),var(--purple));
+  background-size:300% 100%;
+  animation:joinShift 7s linear infinite;
+  box-shadow:0 14px 44px rgba(139,92,246,.45), 0 0 0 1px rgba(255,255,255,.05) inset;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+@keyframes joinShift{ to{ background-position:300% 0; } }
+@media (hover:hover){ .join:hover{ transform:translateY(-4px) scale(1.01); box-shadow:0 18px 56px rgba(37,99,235,.55); } }
+.join:active{ transform:scale(.97); }
+
+.botnum{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 18px;
+  border-radius:999px;
+  background:rgba(37,211,102,.14);
+  border:1px solid rgba(37,211,102,.45);
+  font-size:1.18rem;
+  font-weight:800;
+  letter-spacing:.03em;
+  text-decoration:none;
+  color:#fff;
+  transition:transform .25s ease, background .25s ease;
+}
+.botnum svg{ width:20px; height:20px; color:#25d366; }
+@media (hover:hover){ .botnum:hover{ transform:translateY(-2px); background:rgba(37,211,102,.24); } }
+
+.features-label{ color:var(--muted); font-size:.84rem; margin-top:4px; }
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+}
+.chip{
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  font-size:.78rem;
+  font-weight:600;
+}
+.chip:nth-child(5n+1){ border-color:rgba(255,208,0,.55); }
+.chip:nth-child(5n+2){ border-color:rgba(255,48,79,.55); }
+.chip:nth-child(5n+3){ border-color:rgba(139,92,246,.6); }
+.chip:nth-child(5n+4){ border-color:rgba(37,99,235,.7); }
+
+.description{
+  width:100%;
+  margin-top:8px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.14);
+  text-align:left;
+}
+.rules-title{
+  text-align:center;
+  font-size:1.02rem;
+  font-weight:800;
+  line-height:1.4;
+  margin-bottom:18px;
+}
+.rules{ font-size:.84rem; color:rgba(255,255,255,.86); }
+.rules h3{
+  font-size:.9rem;
+  font-weight:800;
+  color:var(--yellow);
+  margin:24px 0 8px;
+  letter-spacing:.02em;
+}
+.rules p{ margin-bottom:8px; }
+.rules ul{ list-style:none; }
+.rules li{ position:relative; padding-left:18px; margin-bottom:5px; }
+.rules li::before{ content:"•"; position:absolute; left:4px; color:var(--purple); font-weight:800; }
+
+.panel{
+  padding:16px;
+  border-radius:18px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+}
+.panel .panel-title{ font-weight:800; color:var(--yellow); margin-bottom:6px; }
+.panel.form{ margin-top:10px; white-space:pre-line; line-height:1.9; }
+
+.link-pill{
+  display:inline-block;
+  max-width:100%;
+  padding:10px 16px;
+  border-radius:16px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  font-weight:700;
+  text-decoration:none;
+  word-break:break-all;
+  transition:background .25s ease, transform .25s ease;
+}
+@media (hover:hover){ .link-pill:hover{ background:rgba(255,255,255,.16); transform:translateY(-2px); } }
+
+.footer{
+  text-align:center;
+  color:rgba(255,255,255,.55);
+  font-size:.74rem;
+  margin-top:4px;
+}
+
+@media (max-width:380px){
+  .container{ padding-left:12px; padding-right:12px; }
+  .card{ padding:22px 16px 18px; border-radius:26px; }
+}
+
+#fliers{
+  position:fixed;
+  inset:0;
+  z-index:2147483000;
+  pointer-events:none;
+  overflow:hidden;
+}
+.flier{
+  position:absolute;
+  left:0; top:0;
+  pointer-events:none;
+  will-change:transform;
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));
+}
+.flier svg{ display:block; width:100%; height:100%; overflow:visible; }
+
+.wl,.wr{ transform-box:fill-box; animation-duration:var(--flap,.4s); animation-timing-function:ease-in-out; animation-iteration-count:infinite; animation-direction:alternate; }
+.wl{ transform-origin:100% 50%; animation-name:flapL; }
+.wr{ transform-origin:0% 50%;   animation-name:flapR; }
+@keyframes flapL{ from{ transform:scaleX(1); }  to{ transform:scaleX(.16); } }
+@keyframes flapR{ from{ transform:scaleX(1); }  to{ transform:scaleX(.16); } }
+
+.bw{
+  transform-origin:62px 44px;
+  animation:birdFlap var(--flap,.4s) ease-in-out infinite alternate;
+}
+.bw.far{ animation-delay:calc(var(--flap,.4s) * -.12); }
+@keyframes birdFlap{
+  from{ transform:rotate(12deg) scaleY(1); }
+  to{   transform:rotate(-72deg) scaleY(.85); }
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  #fliers{ display:none; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12c0 1.87.51 3.62 1.4 5.12L2 22l5.05-1.32A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.15c-1.62 0-3.13-.45-4.43-1.23l-.32-.19-3.3.87.88-3.22-.21-.33A8.15 8.15 0 013.85 12c0-4.5 3.66-8.15 8.15-8.15S20.15 7.5 20.15 12 16.5 20.15 12 20.15z"/>
+      <path fill="currentColor" d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.46-.15-.65.15-.19.29-.75.93-.92 1.12-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.23-.56-.47-.48-.65-.49-.17-.01-.36-.01-.55-.01s-.51.07-.78.36c-.26.29-1.02 1-1.02 2.43 0 1.43 1.05 2.82 1.19 3.01.15.19 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.11.56-.08 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.37-.07-.12-.26-.19-.55-.34z"/>
+    </symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M16.6 5.8A4.3 4.3 0 0115.5 3h-3.1v12.4a2.6 2.6 0 11-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 105 5.7V9.1a7.4 7.4 0 004.3 1.4V7.4a4.3 4.3 0 01-3.3-1.6z"/>
+    </symbol>
+    <symbol id="i-channel" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 11v2a1 1 0 001 1h2l6 4V6L7 10H5a1 1 0 00-1 1zM17 9a4 4 0 010 6M19.5 6.5a8 8 0 010 11"/>
+    </symbol>
+    <symbol id="i-verified" viewBox="0 0 24 24">
+      <path fill="#20a1ff" d="M12 1.6l2.5 1.6 2.9-.4 1.4 2.6 2.7 1.2-.1 3 1.6 2.5-1.6 2.5.1 3-2.7 1.2-1.4 2.6-2.9-.4L12 22.4l-2.5-1.6-2.9.4-1.4-2.6-2.7-1.2.1-3L1 12l1.6-2.5-.1-3 2.7-1.2 1.4-2.6 2.9.4z"/>
+      <path fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.2l2.9 2.9 5.6-6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="aurora" aria-hidden="true">
+  <div class="blob yellow"></div>
+  <div class="blob red"></div>
+  <div class="blob purple"></div>
+  <div class="blob blue"></div>
+</div>
+
+<main class="container">
+
+  <section class="card">
+    <div class="ring big"><img id="groupThumbnail" alt="Thumbnail group" width="104" height="104"></div>
+    <h1 class="page-title" data-text="groupName"></h1>
+
+    <div class="description">
+      <div class="rules-title">SEBELUM MASUK GROUP NYA TOLONG BACA RULES NYA YAAA</div>
+
+      <div class="rules">
+        <div class="panel">
+          <div class="panel-title">「 <span data-text="groupName"></span> 」</div>
+          Tempat buat ngobrol santai, kenalan, sharing, dan menghabiskan waktu bersama. Bebas bahas apa saja selama tetap menghargai satu sama lain.
+        </div>
+
+        <h3>𝗪𝗛𝗔𝗧 𝗪𝗘 𝗧𝗔𝗟𝗞 𝗔𝗕𝗢𝗨𝗧</h3>
+        <ul>
+          <li>Anime &amp; Manga</li>
+          <li>Game</li>
+          <li>Musik &amp; Film</li>
+          <li>Teknologi</li>
+          <li>Meme &amp; Random Talk</li>
+          <li>Art &amp; Wallpaper</li>
+          <li>Rekomendasi</li>
+          <li>Dan hal menarik lainnya</li>
+        </ul>
+
+        <h3>𝗕𝗢𝗧 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣</h3>
+        <p>Grup ini juga menyediakan bot WhatsApp dengan berbagai fitur:</p>
+        <ul>
+          <li>🎌 Anime</li>
+          <li>🤖 AI</li>
+          <li>🎮 Game</li>
+          <li>⬇️ Downloader</li>
+          <li>🎨 Sticker</li>
+          <li>🛠️ Tools</li>
+          <li>✨ Dan masih banyak lagi</li>
+        </ul>
+
+        <h3>𝗜𝗡𝗧𝗥𝗢 𝗠𝗘𝗠𝗕𝗘𝗥</h3>
+        <p>Member baru wajib memperkenalkan diri setelah masuk.</p>
+        <div class="panel form">✧ Nama :
+✧ Gender :
+✧ Umur :
+✧ Kelas :
+✧ Panggilan :
+✧ Hobi :
+✧ Asal :
+✧ Anime Fav :</div>
+
+        <h3>𝗚𝗥𝗢𝗨𝗣 𝗥𝗨𝗟𝗘𝗦</h3>
+        <ul>
+          <li>Jangan spam chat, stiker, mention, atau link.</li>
+          <li>Toxic sewajarnya dan jangan berlebihan.</li>
+          <li>Jangan menghina atau merendahkan member lain.</li>
+          <li>Saling menghargai dan jaga sikap.</li>
+          <li>Hindari SARA, politik, dan topik yang memicu keributan.</li>
+          <li>Jangan menyebarkan hoaks atau informasi yang belum jelas.</li>
+          <li>Jangan membawa masalah pribadi ke dalam grup.</li>
+          <li>Dilarang mengirim konten 18+ atau tidak pantas.</li>
+          <li>Jangan memprovokasi atau sengaja mencari masalah.</li>
+          <li>Hormati admin dan keputusan grup.</li>
+          <li>Jaga kenyamanan bersama.</li>
+          <li>Tag SW maksimal 2× sehari.</li>
+          <li>Link maksimal 3× dalam seminggu.</li>
+        </ul>
+
+        <h3>𝗕𝗢𝗧 𝗥𝗨𝗟𝗘</h3>
+        <p>Gunakan bot dengan wajar dan jangan melakukan spam command, terutama melalui private chat. Jika tetap dilakukan setelah mendapat peringatan, akses bot dapat dibatasi atau diblokir.</p>
+
+        <h3>𝗚𝗥𝗢𝗨𝗣 𝗛𝗢𝗨𝗥𝗦</h3>
+        <p>GC ditutup : 23.00 WIB<br>GC dibuka : 05.00 WIB</p>
+
+        <h3>𝗢𝗪𝗡𝗘𝗥</h3>
+        <p><a class="link-pill" data-wa="ownerNumber" data-wa-text="ownerNumber" href="#" target="_blank" rel="noopener"></a></p>
+
+        <h3>𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞</h3>
+        <p><a class="link-pill" data-href="groupLink" data-text="groupLink" href="#" target="_blank" rel="noopener"></a></p>
+
+        <h3>𝗘𝗡𝗝𝗢𝗬 𝗧𝗛𝗘 𝗚𝗥𝗢𝗨𝗣</h3>
+        <p>Ngobrol santai, kenalan, sharing, dan seru-seruan bareng. Tetap jaga sikap dan bikin grup ini nyaman untuk semuanya. ✦</p>
+      </div>
+    </div>
+
+    <a class="join" data-href="groupLink" href="#" target="_blank" rel="noopener">🚀 JOIN GROUP</a>
+  </section>
+
+  <section class="card">
+    <div class="card-title">Chat Bot</div>
+    <a class="botnum" data-wa="botNumber" href="#" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg>
+      <span data-text="botNumber"></span>
+    </a>
+    <p class="card-desc">Ingin mempunyai bot dengan harga yang murah? Atau ingin mengetes bot terlebih dahulu?</p>
+    <div class="features-label">Bot memiliki berbagai fitur seperti:</div>
+    <div class="chips">
+      <span class="chip">⬇️ Downloader</span>
+      <span class="chip">⚔️ RPG</span>
+      <span class="chip">🎮 Game</span>
+      <span class="chip">🤖 AI</span>
+      <span class="chip">🎌 Anime</span>
+      <span class="chip">🎨 Sticker</span>
+      <span class="chip">🛠️ Tools</span>
+      <span class="chip">✨ Dan masih banyak lagi</span>
+    </div>
+    <a class="btn wa" data-wa="botNumber" href="#" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg> CHAT BOT
+    </a>
+  </section>
+
+  <section class="card">
+    <div class="ring big"><img id="tiktokThumbnail" alt="Thumbnail TikTok" width="104" height="104"></div>
+    <div class="name-row">
+      <span data-text="tiktokName"></span>
+      <svg class="verified" aria-label="Akun terverifikasi" role="img"><use href="#i-verified"/></svg>
+    </div>
+    <div class="handle" data-text="tiktokUsername"></div>
+    <p class="card-desc multiline" data-text="tiktokDescription"></p>
+    <a class="btn tt" data-href="tiktokLink" href="#" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-tt"/></svg> BUKA TIKTOK
+    </a>
+  </section>
+
+  <section class="card">
+    <div class="ring"><img id="channelThumbnail" alt="Thumbnail channel" width="92" height="92"></div>
+    <div class="card-title" data-text="channelName"></div>
+    <p class="card-desc" data-text="channelDescription"></p>
+    <a class="btn wa" data-href="channelLink" href="#" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-channel"/></svg> LIHAT CHANNEL
+    </a>
+  </section>
+
+  <div class="footer">© <span id="year"></span> <span data-text="groupName"></span></div>
+</main>
+
+<div id="fliers" aria-hidden="true"></div>
+
+<script>
+(function(){
+  function waLink(number){
+    var digits = String(number).replace(/\D/g, '');
+    if(digits.charAt(0) === '0'){ digits = '62' + digits.slice(1); }
+    return 'https://wa.me/' + digits;
+  }
+
+  document.querySelectorAll('[data-text]').forEach(function(el){
+    var value = CONFIG[el.getAttribute('data-text')];
+    if(value !== undefined){ el.textContent = value; }
+  });
+  document.querySelectorAll('[data-href]').forEach(function(el){
+    var value = CONFIG[el.getAttribute('data-href')];
+    if(value){ el.href = value; }
+  });
+  document.querySelectorAll('[data-wa]').forEach(function(el){
+    var value = CONFIG[el.getAttribute('data-wa')];
+    if(value){ el.href = waLink(value); }
+  });
+  document.querySelectorAll('[data-wa-text]').forEach(function(el){
+    var value = CONFIG[el.getAttribute('data-wa-text')];
+    if(value){ el.textContent = waLink(value); }
+  });
+
+  document.title = CONFIG.groupName;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function fallbackAvatar(label){
+    var ch = (label || '?').trim().charAt(0).toUpperCase();
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">' +
+      '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0" stop-color="#8b5cf6"/><stop offset=".55" stop-color="#2563eb"/><stop offset="1" stop-color="#ff304f"/>' +
+      '</linearGradient></defs><rect width="120" height="120" fill="url(#g)"/>' +
+      '<text x="60" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-size="54" font-weight="700" fill="#fff">' + ch + '</text></svg>';
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  }
+  function setPhoto(id, url, label){
+    var img = document.getElementById(id);
+    var fallback = fallbackAvatar(label);
+    if(!url){ img.src = fallback; return; }
+    img.onerror = function(){ img.onerror = null; img.src = fallback; };
+    img.src = url;
+  }
+  setPhoto('groupThumbnail', CONFIG.groupThumbnail, CONFIG.groupName);
+  setPhoto('tiktokThumbnail', CONFIG.tiktokThumbnail, CONFIG.tiktokName);
+  setPhoto('channelThumbnail', CONFIG.channelThumbnail, CONFIG.channelName);
+})();
+
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+
+  var layer = document.getElementById('fliers');
+  var PI = Math.PI;
+  function rand(a,b){ return a + Math.random()*(b-a); }
+  function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+  function butterflySVG(c1, c2, flap){
+    var st = 'stroke="rgba(0,0,0,.35)" stroke-width="1"';
+    return '<svg viewBox="0 0 100 100" style="--flap:' + flap + 's">' +
+      '<g class="wl">' +
+        '<path d="M50 47C38 16 8 10 6 31C5 46 27 55 50 51Z" fill="' + c1 + '" ' + st + '/>' +
+        '<path d="M50 53C31 54 12 66 19 82C27 95 46 78 50 62Z" fill="' + c2 + '" ' + st + '/>' +
+        '<circle cx="24" cy="33" r="4.2" fill="rgba(255,255,255,.78)"/>' +
+        '<circle cx="28" cy="77" r="3" fill="rgba(255,255,255,.68)"/>' +
+      '</g>' +
+      '<g class="wr">' +
+        '<path d="M50 47C62 16 92 10 94 31C95 46 73 55 50 51Z" fill="' + c1 + '" ' + st + '/>' +
+        '<path d="M50 53C69 54 88 66 81 82C73 95 54 78 50 62Z" fill="' + c2 + '" ' + st + '/>' +
+        '<circle cx="76" cy="33" r="4.2" fill="rgba(255,255,255,.78)"/>' +
+        '<circle cx="72" cy="77" r="3" fill="rgba(255,255,255,.68)"/>' +
+      '</g>' +
+      '<ellipse cx="50" cy="52" rx="2.8" ry="17" fill="#1b1030"/>' +
+      '<circle cx="50" cy="34" r="3.4" fill="#1b1030"/>' +
+      '<path d="M49 32C46 24 42 20 38 19M51 32C54 24 58 20 62 19" stroke="#1b1030" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
+    '</svg>';
+  }
+
+  function birdSVG(body, wing, flap){
+    return '<svg viewBox="0 0 120 84" style="--flap:' + flap + 's">' +
+      '<g class="bw far"><path d="M60 42C58 22 40 8 16 6C32 16 42 30 48 46Z" fill="' + wing + '" opacity=".55"/></g>' +
+      '<path d="M26 46L4 38L9 48L3 57L28 51Z" fill="' + body + '"/>' +
+      '<path d="M24 46C32 36 62 34 82 40C90 42 96 43 100 44C96 50 86 54 70 56C50 58 32 54 24 46Z" fill="' + body + '"/>' +
+      '<circle cx="92" cy="40" r="9" fill="' + body + '"/>' +
+      '<path d="M99 38L114 42L99 46Z" fill="#f6b73c"/>' +
+      '<circle cx="95" cy="38" r="1.9" fill="#141414"/>' +
+      '<g class="bw near"><path d="M64 44C60 22 40 6 12 8C32 16 46 30 52 48Z" fill="' + wing + '"/></g>' +
+    '</svg>';
+  }
+
+  var butterflyPalettes = [
+    ['#ffd000','#ff304f'], ['#8b5cf6','#56ccf2'], ['#ff304f','#ffd000'],
+    ['#2563eb','#8b5cf6'], ['#ffd000','#8b5cf6'], ['#ff7ab6','#ffd000']
+  ];
+  var birdPalettes = [
+    ['#f5f2ff','#b7a8ff'], ['#ffeeb0','#ffb02e'], ['#ffd6df','#ff6b8b'], ['#d8ecff','#6aa8ff']
+  ];
+
+  var fliers = [];
+  var small = Math.min(innerWidth, innerHeight) < 520;
+  var nButterfly = small ? 5 : 8;
+  var nBird = small ? 3 : 4;
+
+  function spawnButterfly(f, initial){
+    var W = innerWidth, H = innerHeight, m = 60, x, y;
+    if(initial){ x = rand(0,W); y = rand(0,H); }
+    else {
+      var side = Math.floor(rand(0,4));
+      if(side === 0){ x = -m; y = rand(0,H); }
+      else if(side === 1){ x = W+m; y = rand(0,H); }
+      else if(side === 2){ x = rand(0,W); y = H+m; }
+      else { x = rand(0,W); y = -m; }
+    }
+    var tx = rand(W*.1, W*.9), ty = rand(H*.1, H*.9);
+    f.x = x; f.y = y;
+    f.th0 = initial ? rand(0, 2*PI) : Math.atan2(ty-y, tx-x);
+    f.speed = rand(45, 95);
+    f.a1 = rand(.5, 1.0); f.f1 = rand(.7, 1.3); f.p1 = rand(0, 2*PI);
+    f.a2 = rand(.2, .5);  f.f2 = rand(1.8, 2.8); f.p2 = rand(0, 2*PI);
+    f.age = 0;
+  }
+
+  function spawnBird(f, initial){
+    var W = innerWidth, H = innerHeight;
+    var dir = Math.random() < .5 ? 1 : -1;
+    f.x = initial ? rand(0, W) : (dir === 1 ? -100 : W + 100);
+    f.y = rand(H*.08, H*.88);
+    f.th0 = (dir === 1 ? 0 : PI) + rand(-.28, .28);
+    f.speed = rand(115, 195);
+    f.a1 = rand(.12, .3); f.f1 = rand(.5, 1.1); f.p1 = rand(0, 2*PI);
+    f.age = 0;
+  }
+
+  function makeButterfly(){
+    var size = rand(26, 50);
+    var pal = pick(butterflyPalettes);
+    var flap = rand(.26, .46);
+    var el = document.createElement('div');
+    el.className = 'flier';
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    el.style.marginLeft = (-size/2) + 'px';
+    el.style.marginTop = (-size/2) + 'px';
+    el.innerHTML = butterflySVG(pal[0], pal[1], flap.toFixed(2));
+    layer.appendChild(el);
+    var f = { kind:'b', el:el, size:size };
+    spawnButterfly(f, true);
+    return f;
+  }
+
+  function makeBird(){
+    var w = rand(40, 70), h = w * 0.7;
+    var pal = pick(birdPalettes);
+    var flap = rand(.28, .45);
+    var el = document.createElement('div');
+    el.className = 'flier';
+    el.style.width = w + 'px';
+    el.style.height = h + 'px';
+    el.style.marginLeft = (-w/2) + 'px';
+    el.style.marginTop = (-h/2) + 'px';
+    el.innerHTML = birdSVG(pal[0], pal[1], flap.toFixed(2));
+    layer.appendChild(el);
+    var f = { kind:'r', el:el, size:w };
+    spawnBird(f, true);
+    return f;
+  }
+
+  for(var i=0;i<nButterfly;i++) fliers.push(makeButterfly());
+  for(var j=0;j<nBird;j++) fliers.push(makeBird());
+
+  var last = performance.now();
+  function tick(now){
+    var dt = Math.min(.05, (now - last) / 1000);
+    last = now;
+    var W = innerWidth, H = innerHeight, M = 160;
+
+    for(var k=0;k<fliers.length;k++){
+      var f = fliers[k];
+      f.age += dt;
+
+      if(f.kind === 'b'){
+        var th = f.th0 +
+          Math.sin(f.age*f.f1 + f.p1) * f.a1 +
+          Math.sin(f.age*f.f2 + f.p2) * f.a2;
+        f.x += Math.cos(th) * f.speed * dt;
+        f.y += Math.sin(th) * f.speed * dt - Math.sin(f.age*3 + f.p1) * 10 * dt;
+        f.el.style.transform = 'translate3d(' + f.x.toFixed(1) + 'px,' + f.y.toFixed(1) + 'px,0) rotate(' + (th*180/PI + 90).toFixed(1) + 'deg)';
+      } else {
+        var tb = f.th0 + Math.sin(f.age*f.f1 + f.p1) * f.a1;
+        var vx = Math.cos(tb) * f.speed, vy = Math.sin(tb) * f.speed;
+        f.x += vx * dt;
+        f.y += vy * dt;
+        var dir = vx >= 0 ? 1 : -1;
+        var tilt = Math.atan2(vy, Math.abs(vx)) * 180/PI * dir;
+        f.el.style.transform = 'translate3d(' + f.x.toFixed(1) + 'px,' + f.y.toFixed(1) + 'px,0) rotate(' + tilt.toFixed(1) + 'deg) scaleX(' + dir + ')';
+      }
+
+      if(f.x < -M || f.x > W+M || f.y < -M || f.y > H+M || f.age > 90){
+        if(f.kind === 'b') spawnButterfly(f, false); else spawnBird(f, false);
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
